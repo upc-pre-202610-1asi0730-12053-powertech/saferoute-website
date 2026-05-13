@@ -5,7 +5,8 @@
       "roles": "Roles",
       "plans": "Planes",
       "how": "¿Cómo funciona?",
-      "cta": "Comenzar"
+      "signin": "Iniciar sesión",
+      "cta": "Comenzar gratis"
     },
     "hero": {
       "badge": "Sistema en vivo",
@@ -196,8 +197,8 @@
     "cta": {
       "title": "¿Listo para digitalizar tu operación?",
       "desc": "Únete a SafeRoute y deja atrás el caos de WhatsApp, llamadas y papel.",
-      "btn_plans": "Ver planes",
-      "btn_how": "¿Cómo funciona?"
+      "btn_hire":   "Adquirir plan",
+      "btn_signin": "Iniciar sesión"
     },
     "footer": {
       "text": "© 2026 <strong>SafeRoute</strong> — Plataforma de gestión de transporte escolar. Todos los derechos reservados."
@@ -211,7 +212,8 @@
       "roles": "Roles",
       "plans": "Plans",
       "how": "How it works?",
-      "cta": "Get started"
+      "signin": "Sign in",
+      "cta": "Get started free"
     },
     "hero": {
       "badge": "Live system",
@@ -402,8 +404,8 @@
     "cta": {
       "title": "Ready to digitalize your operation?",
       "desc": "Join SafeRoute and leave behind the chaos of WhatsApp, calls and paper.",
-      "btn_plans": "View plans",
-      "btn_how": "How does it work?"
+      "btn_hire":   "Get a plan",
+      "btn_signin": "Sign in"
     },
     "footer": {
       "text": "© 2026 <strong>SafeRoute</strong> — School transportation management platform. All rights reserved."

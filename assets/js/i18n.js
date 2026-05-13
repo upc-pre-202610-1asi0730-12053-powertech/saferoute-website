@@ -42,8 +42,11 @@
 
   function renderPlans(lang) {
     const d = translations[lang].plans;
-    const featuredIdx = 1;
-    document.getElementById('plans-grid').innerHTML = d.cards.map((c, i) => `
+    const featuredIdx  = 1;
+    const planKeys     = ['BASIC', 'INTERMEDIATE', 'COMPLETE'];
+    document.getElementById('plans-grid').innerHTML = d.cards.map((c, i) => {
+      const planUrl = `${SIGNUP_ADMIN_URL}&planTier=${planKeys[i]}&planName=${encodeURIComponent(c.name)}&planPrice=${encodeURIComponent(c.price)}`;
+      return `
       <div class="plan-card ${i === featuredIdx ? 'featured' : ''}">
         ${i === featuredIdx ? `<div class="plan-badge">${d.badge_popular}</div>` : ''}
         <div class="plan-name">${c.emoji} ${c.name}</div>
@@ -52,8 +55,9 @@
         <ul class="plan-features">
           ${c.features.map(f => `<li>${f}</li>`).join('')}
         </ul>
-        <a href="${SIGNUP_ADMIN_URL}" class="btn-plan ${i === featuredIdx ? 'btn-plan-primary' : 'btn-plan-outline'}">${d.btn_hire}</a>
-      </div>`).join('');
+        <a href="${planUrl}" class="btn-plan ${i === featuredIdx ? 'btn-plan-primary' : 'btn-plan-outline'}">${d.btn_hire}</a>
+      </div>`;
+    }).join('');
   }
 
   function renderSteps(lang) {

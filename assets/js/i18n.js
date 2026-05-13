@@ -104,7 +104,6 @@
     /* ── CTA links → web app ── */
     const set = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
     set('nav-cta-link',    SIGNIN_URL);
-    set('nav-signin-link', SIGNIN_URL);
     set('cta-hire-link',   SIGNUP_ADMIN_URL);
     set('cta-signin-link', SIGNIN_URL);
   }

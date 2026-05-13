@@ -1,5 +1,10 @@
 (
     async () => {
+  /* ── Web app base URL (change to production URL when deploying) ── */
+  const APP_URL     = 'http://localhost:5173';
+  const SIGNIN_URL  = `${APP_URL}/iam/sign-in`;
+  const SIGNUP_ADMIN_URL = `${APP_URL}/iam/sign-up?mode=admin`;
+
   /* ── 1. Load translations ── */
   let translations = {};
   try {
@@ -47,7 +52,7 @@
         <ul class="plan-features">
           ${c.features.map(f => `<li>${f}</li>`).join('')}
         </ul>
-        <a href="#cta" class="btn-plan ${i === featuredIdx ? 'btn-plan-primary' : 'btn-plan-outline'}">${d.btn_hire}</a>
+        <a href="${SIGNUP_ADMIN_URL}" class="btn-plan ${i === featuredIdx ? 'btn-plan-primary' : 'btn-plan-outline'}">${d.btn_hire}</a>
       </div>`).join('');
   }
 
@@ -91,6 +96,13 @@
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+
+    /* ── CTA links → web app ── */
+    const set = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
+    set('nav-cta-link',    SIGNIN_URL);
+    set('nav-signin-link', SIGNIN_URL);
+    set('cta-hire-link',   SIGNUP_ADMIN_URL);
+    set('cta-signin-link', SIGNIN_URL);
   }
 
   /* ── Language switcher ── */

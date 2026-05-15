@@ -1,9 +1,9 @@
 (
     async () => {
-  /* ── Web app base URL (change to production URL when deploying) ── */
-  const APP_URL     = 'http://localhost:5173';
-  const SIGNIN_URL  = `${APP_URL}/iam/sign-in`;
-  const SIGNUP_ADMIN_URL = `${APP_URL}/iam/sign-up?mode=admin`;
+  /* ── Web app base URL ── */
+  const APP_URL          = 'https://happy-river-0e93e8e0f.7.azurestaticapps.net';
+  const SIGNIN_URL       = `${APP_URL}/identity-and-access-management/sign-in`;
+  const SIGNUP_ADMIN_URL = `${APP_URL}/identity-and-access-management/sign-up`;
 
   /* ── 1. Load translations ── */
   let translations = {};
@@ -45,7 +45,7 @@
     const featuredIdx  = 1;
     const planKeys     = ['BASIC', 'INTERMEDIATE', 'COMPLETE'];
     document.getElementById('plans-grid').innerHTML = d.cards.map((c, i) => {
-      const planUrl = `${SIGNUP_ADMIN_URL}&planTier=${planKeys[i]}&planName=${encodeURIComponent(c.name)}&planPrice=${encodeURIComponent(c.price)}`;
+      const planUrl = `${SIGNUP_ADMIN_URL}?planTier=${planKeys[i]}&planName=${encodeURIComponent(c.name)}&planPrice=${encodeURIComponent(c.price)}`;
       return `
       <div class="plan-card ${i === featuredIdx ? 'featured' : ''}">
         ${i === featuredIdx ? `<div class="plan-badge">${d.badge_popular}</div>` : ''}

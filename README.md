@@ -23,6 +23,7 @@ The SafeRoute Project enables the digitalization of private school transport ope
 ![Parte 5](assets/images/p5.png)
 ![Parte 6](assets/images/p6.png)
 ![Parte 7](assets/images/p7.png)
+![Parte 7](assets/images/p8.png)
 
 ### Links
 - Solution URL : https://powertech-nrc12053.github.io/saferoute-website/
